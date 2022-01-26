@@ -26,3 +26,34 @@ body {
   position: absolute;
   inset: 16.5rem 0 0 4rem;
 }
+
+.menu-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 375px;
+  height: 839px;
+  background: #F3E4E1;
+  overflow: hidden;
+}
+
+.menu-page #top-flower {
+  position: absolute;
+  inset: 0 0 0 0;
+}
+
+.menu-page #bottom-flower {
+  position: absolute;
+  inset: 48rem 0 0 0;
+}
+
+.menu-page h1 {
+  position: absolute;
+  bottom: 40rem;
+  color: #2F2926;
+  font-family: "PT Serif";
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50,4px;
+}
