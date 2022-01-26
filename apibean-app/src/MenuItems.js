@@ -1,20 +1,28 @@
 import React from "react";
+import { useState, useEffect  } from "react";
+import ItemComponent from "./ItemComponent";
 
 function MenuItems() {
+  const [item, setItem] = useState([]);
 
-  function addItem() {
-    alert("hej");
-  }
+  useEffect(() => {
+    async function getItems() {
+    const response = await fetch("http://localhost:5000/api/beans");
+    const itemArray = await response.json();
+    setItem(itemArray.menu);
+    }
+    getItems();
+    }, []);
 
   return (
     <div>
-      <div className="menu-item">
-        <div className="button-class">
-          <button id="add-button" onClick={addItem}></button>
-        </div>
-        <h1>Kaffe......................49 kr</h1>
-        <p>Bryggd på månadens bönor</p>
-      </div>
+      {item.map((item) => {
+        return <ItemComponent 
+        title={item.title} 
+        price={item.price} 
+        desc={item.desc} 
+        key={item.id}/>
+      })}
     </div>
   );
 }

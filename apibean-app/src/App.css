@@ -69,10 +69,11 @@ body {
 .menu-item {
   height: 60px;
   background-color: aqua;
+  margin-top: 3%;
 }
 
 .menu-item h1 {
-  position: absolute;
+  position: relative;
   bottom: 92%;
   left: 15%;
   font-family: "PT Serif";
@@ -80,8 +81,8 @@ body {
 }
 
 .menu-item p {
-  position: absolute;
-  bottom: 88%;
+  position: relative;
+  top: -10%;
   left: 15%;
   font-family: "Work Sans";
 }
@@ -105,8 +106,8 @@ body {
 #bag-button {
   background: url("assets/graphics/bag.svg");
   position: absolute;
-  top: 4rem;
-  right: 15rem;
+  top: 0rem;
+  right: 30rem;
   background-color: #2F2926;
   background-repeat: no-repeat;
   background-position: 50%;
