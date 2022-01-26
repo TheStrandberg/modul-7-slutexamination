@@ -86,26 +86,38 @@ body {
   font-family: "Work Sans";
 }
 
-.button-class {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
+#add-button:hover {
+  background-color: #423b37;
+}
+
+#add-button {
+  background: url("assets/graphics/add.svg");
+  background-color: #2F2926;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 1rem;
   width: 35px;
   height: 35px;
   border-radius: 50%;
+  border: none;
 }
 
-.button-class:hover {
+#bag-button {
+  background: url("assets/graphics/bag.svg");
+  position: absolute;
   background-color: #2F2926;
-}
-
-.menu-item #add-button {
-  background: url("assets/graphics/add.svg");
-  width: 20px;
-  height: 20px;
-  cursor: pointer; 
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 1rem;
+  bottom: 130%;
+  left: 90%;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: none;
+}
+
+#bag-button:hover {
+  background-color: #423b37;
 }
 
