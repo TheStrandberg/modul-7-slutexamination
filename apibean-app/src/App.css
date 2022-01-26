@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-page {
+  position: relative;
+  width: 375px;
+  height: 667px;
+  background: #38846D;
+  overflow: hidden;
+}
+
+.landing-page #right-flower {
+  position: relative;
+  inset: 0 0 0 15rem;
+}
+
+.landing-page #left-flower {
+  position: relative;
+  inset: 0 0 0 -9rem;
+}
+
+.landing-page #loader {
+  position: absolute;
+  inset: 16.5rem 0 0 4rem;
+}
