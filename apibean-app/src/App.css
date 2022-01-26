@@ -105,19 +105,37 @@ body {
 #bag-button {
   background: url("assets/graphics/bag.svg");
   position: absolute;
+  top: 4rem;
+  right: 15rem;
   background-color: #2F2926;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 1rem;
-  bottom: 130%;
-  left: 90%;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   border: none;
+  z-index: 1;
 }
 
 #bag-button:hover {
   background-color: #423b37;
+}
+
+.bag #counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 3.2rem;
+  right: 14.8rem;
+  z-index: 2;
+  color: white;
+  background-color: #E5674E;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  font-size: 12px;
+  font-family: "PT Serif";
 }
 
