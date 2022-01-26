@@ -48,7 +48,7 @@ body {
   inset: 48rem 0 0 0;
 }
 
-.menu-page h1 {
+.menu-page #meny-header {
   position: absolute;
   bottom: 40rem;
   color: #2F2926;
@@ -57,3 +57,55 @@ body {
   font-size: 42px;
   line-height: 50,4px;
 }
+
+.menu-layout {
+  position: relative;
+  top: 5%;
+  width: 300px;
+  height: 500px;
+  background-color: blue;
+}
+
+.menu-item {
+  height: 60px;
+  background-color: aqua;
+}
+
+.menu-item h1 {
+  position: absolute;
+  bottom: 92%;
+  left: 15%;
+  font-family: "PT Serif";
+  font-size: 23px;
+}
+
+.menu-item p {
+  position: absolute;
+  bottom: 88%;
+  left: 15%;
+  font-family: "Work Sans";
+}
+
+.button-class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.button-class:hover {
+  background-color: #2F2926;
+}
+
+.menu-item #add-button {
+  background: url("assets/graphics/add.svg");
+  width: 20px;
+  height: 20px;
+  cursor: pointer; 
+  border-radius: 50%;
+  border: none;
+}
+
