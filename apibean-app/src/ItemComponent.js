@@ -7,7 +7,12 @@ function ItemComponent({ title, price, desc }) {
         <div className="button-class">
           <button id="add-button"></button>
         </div>
-        <h1>{title} {price} kr</h1>
+        <div className="title">{title}</div>
+
+        <div className="container-dots"></div>
+
+        <div className="price">{price} kr</div>
+
         <p>{desc}</p>
       </div>
     </div>
