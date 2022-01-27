@@ -20,7 +20,6 @@ function MenuItems() {
 
   function AddItem(item) {
     dispatch(addItemToBasket(item));
-    console.log(item);
   }
 
   return (
