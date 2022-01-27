@@ -82,9 +82,10 @@ body {
 
 .menu-item p {
   position: relative;
-  top: -10%;
+  top: -9%;
   left: 15%;
   font-family: "Work Sans";
+  font-weight: 400;
 }
 
 #add-button:hover {
@@ -105,9 +106,9 @@ body {
 
 #bag-button {
   background: url("assets/graphics/bag.svg");
-  position: absolute;
-  top: 0rem;
-  right: 30rem;
+  position: relative;
+  top: 7.5rem;
+  left: 19rem;
   background-color: #2F2926;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -127,10 +128,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 3.2rem;
-  right: 14.8rem;
-  z-index: 2;
+  position: relative;
+  top: 3.5rem;
+  left: 28em;
+  z-index: 1;
   color: white;
   background-color: #E5674E;
   border-radius: 50%;
