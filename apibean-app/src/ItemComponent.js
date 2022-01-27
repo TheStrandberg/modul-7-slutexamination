@@ -7,7 +7,7 @@ function ItemComponent({ title, price, desc }) {
         <div className="button-class">
           <button id="add-button"></button>
         </div>
-        <h1>{title}{price} kr</h1>
+        <h1>{title} {price} kr</h1>
         <p>{desc}</p>
       </div>
     </div>
