@@ -1,11 +1,12 @@
 import React from "react";
 
-function ItemComponent({ title, price, desc }) {
+function ItemComponent({ title, price, desc, AddItem }) {
+
   return (
     <div>
       <div className="menu-item">
         <div className="button-class">
-          <button id="add-button"></button>
+          <button id="add-button" onClick={AddItem}></button>
         </div>
         <div className="title">{title}</div>
 
