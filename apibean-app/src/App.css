@@ -2,10 +2,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 90vh;
 }
 
 .landing-page {
-  position: relative;
+  display: flex;
+  justify-items: center;
+  align-items: center;
   width: 375px;
   height: 667px;
   background: #38846D;
@@ -14,17 +17,18 @@ body {
 
 .landing-page #right-flower {
   position: relative;
-  inset: 0 0 0 15rem;
+  inset: 0 0 0 14.5rem;
 }
 
 .landing-page #left-flower {
   position: relative;
-  inset: 0 0 0 -9rem;
+  inset: -.1rem 0 0 -9rem;
 }
 
 .landing-page #loader {
-  position: absolute;
-  inset: 16.5rem 0 0 4rem;
+  position: relative;
+  /* For some reason, setting margin right to positive did not work */
+  inset: 0 0 0 -65%;
 }
 
 .menu-page {
@@ -55,12 +59,11 @@ body {
   font-family: "PT Serif";
   font-weight: 700;
   font-size: 42px;
-  line-height: 50,4px;
 }
 
 .menu-layout {
   position: relative;
-  top: 10%;
+  top: 3%;
   width: 311px;
   height: 474px;
   /* background-color: blue; */
@@ -75,7 +78,7 @@ body {
   width: 100%;
   height: 50px;
   /* background-color: aqua; */
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .title {
@@ -126,7 +129,7 @@ body {
 #bag-button {
   background: url("assets/graphics/bag.svg");
   position: relative;
-  top: 7.5rem;
+  top: 6.5rem;
   left: 19rem;
   background-color: #2F2926;
   background-repeat: no-repeat;
@@ -148,7 +151,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 3.5rem;
+  top: 2.5rem;
   left: 28em;
   z-index: 1;
   color: white;
@@ -159,3 +162,50 @@ body {
   font-size: 12px;
   font-family: "PT Serif";
 }
+
+.cart {
+  display: flex;
+  position: relative;
+}
+.cart .menu-page {
+  height: 656px;
+  opacity: 30%;
+}
+
+.cart .menu-overlay {
+  background-color: black;
+}
+
+.cart .menu-page #meny-header {
+  position: absolute;
+  top: 15%;
+}
+
+.cart .menu-layout {
+  position: relative;
+  top: 20%;
+}
+
+.cart .cart-summary {
+  position: absolute;
+  width: 337px;
+  height: 566px;
+  inset: 4rem 0 0 4.3rem;
+  background-color: white;
+  z-index: 2;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.cart #bag-button {
+  top: 1rem;
+  left: 22.5rem;
+}
+
+.cart .bag #counter {
+  top: -3rem;
+  left: 33em;
+}
+
+
+
+
