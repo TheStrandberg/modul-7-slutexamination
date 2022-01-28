@@ -11,9 +11,11 @@ function Cart() {
 
     return (
     <div className="cart">
-    <div className="cart-summary">
+    <div className="triangle">&#9650;</div>
+    <div className="cart-summary"></div>
+    <h1 id="your-order-header">Din beställning</h1>
+    <Link to="/status"><button id="confirm-btn"><h1>Take My Money!</h1></button></Link>
     
-    </div>
       <div className="bag">
       <Link to="/cart"><button id="bag-button"></button></Link>
         <h1 id="counter">{itemCount}</h1>

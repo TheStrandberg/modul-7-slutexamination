@@ -9,6 +9,8 @@ body {
   display: flex;
   justify-items: center;
   align-items: center;
+  position: relative;
+  bottom: 2.6rem;
   width: 375px;
   height: 667px;
   background: #38846D;
@@ -166,6 +168,9 @@ body {
 .cart {
   display: flex;
   position: relative;
+  bottom: 3rem;
+  right: 3.2rem;
+  width: 375px;
 }
 .cart .menu-page {
   height: 656px;
@@ -187,10 +192,13 @@ body {
 }
 
 .cart .cart-summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   width: 337px;
   height: 566px;
-  inset: 4rem 0 0 4.3rem;
+  inset: 4.1rem 0 0 4.3rem;
   background-color: white;
   z-index: 2;
   border-radius: 5px 5px 5px 5px;
@@ -198,12 +206,56 @@ body {
 
 .cart #bag-button {
   top: 1rem;
-  left: 22.5rem;
+  left: 22.2rem;
 }
 
 .cart .bag #counter {
   top: -3rem;
-  left: 33em;
+  left: 32.3em;
+}
+
+.triangle {
+  position: absolute;
+  left: 23.3rem;
+  top: 3.6rem;
+  -webkit-text-stroke: 7px white;
+  z-index: 2;
+}
+
+.cart #your-order-header {
+  position: absolute;
+  top: 5rem;
+  left: 8.2rem;
+  color: #2F2926;
+  font-family: "PT Serif";
+  font-weight: 700;
+  font-size: 32px;
+  z-index: 2;
+}
+
+.cart #confirm-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 5rem;
+  left: 7rem;
+  width: 248px;
+  height: 55px;
+  background-color: #2F2926;
+  z-index: 2;
+  border-radius: 50px;
+}
+
+#confirm-btn h1 {
+  color: white;
+  font-family: "PT Serif";
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.cart #confirm-btn:hover {
+  background-color: #423b37;
 }
 
 
