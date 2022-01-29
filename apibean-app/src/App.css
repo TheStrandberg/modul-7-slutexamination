@@ -259,6 +259,9 @@ body {
 }
 
 .order-page {
+  position: absolute;
+  bottom: 25.8%;
+  right: 30.5%;
   text-align: center;
   background-color: #E5674E;
   width: 375px;
