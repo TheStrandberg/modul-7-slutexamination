@@ -13,7 +13,12 @@ const itemReducer = (state = initialState, action) => {
                     }
                 ]
             }
-        default: return state;
+        case "RESET": 
+        return {
+            shoppingBasket: []
+        }
+        default: 
+            return state;
     }
 }
 

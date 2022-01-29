@@ -258,6 +258,86 @@ body {
   background-color: #423b37;
 }
 
+.order-page {
+  text-align: center;
+  background-color: #E5674E;
+  width: 375px;
+  height: 667px;
+}
+
+.order-page .order-number {
+  position: relative;
+  top: 62px;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFFFFF;
+  opacity: 70%;
+}
+
+.order-page #order-number-id {
+  font-weight: 700;
+  margin-left: 1.5%;
+}
+
+.order-page img {
+  position: relative;
+  top: 13.5%;
+}
+
+.order-page h1, .order-page h2 {
+  position: relative;
+  top: 18%;
+  color: white;
+  font-family: "PT Serif";
+}
+
+.order-page h1 {
+  font-family: "PT Serif";
+  font-weight: 700;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.order-page h1 {
+  font-family: "Work Sans";
+  font-weight: 700;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.order-time {
+  position: relative;
+  top: 15.5%;
+  display: flex;
+  justify-content: center;
+  gap: 1.5%;
+}
+
+.order-page #order-time-id {
+  font-family: "Work Sans";
+  font-weight: 400;
+}
+
+.order-page button {
+  position: relative;
+  top: 23%;
+  width: 184px;
+  height: 55px;
+  border-radius: 50px;
+  color: white;
+}
+
+.order-page #button-font {
+  position: relative;
+  bottom: 20%;
+  font-family: "PT Serif";
+  font-weight: 700;
+  color: #2F2926;
+  font-size: 24px;
+}
+
 
 
 

@@ -17,7 +17,6 @@ function MenuItems() {
   }, []);
 
   const dispatch = useDispatch();
-
   function AddItem(item) {
     dispatch(addItemToBasket(item));
   }

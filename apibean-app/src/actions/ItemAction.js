@@ -8,3 +8,9 @@ export const addItemToBasket = (item) => {
         payload: item
     }
 }
+
+export const clearCart = () => {
+    return {
+        type: "RESET"
+    };
+}
