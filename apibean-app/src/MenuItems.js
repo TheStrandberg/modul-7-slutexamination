@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { addItemToBasket } from "./actions/ItemAction";
 import ItemComponent from "./ItemComponent";
 
-function MenuItems() {
+function MenuItems( {items}) {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
