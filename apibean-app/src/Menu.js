@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Menu() {
 
   //Gets the number of items in our redux store
-  const itemCount = useSelector((state) => { return state.shoppingBasket.length });
+  const itemCount = useSelector((state) => { return state.shoppingCart.length });
 
   return (
     <div>
