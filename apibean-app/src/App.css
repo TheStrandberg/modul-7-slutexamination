@@ -341,6 +341,45 @@ body {
   font-size: 24px;
 }
 
+.item-summary {
+  display: flex;
+  width: 500px;
+  height: auto;
+  background-color: blue;
+  z-index: 100000;
+}
+
+.item-summary .container-dots{
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  flex: 1;
+  margin-bottom: 6%;
+}
+
+.item-summary li {
+  list-style: none;
+}
+
+ul > li {
+  display: block;
+}
+
+.total-summary {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.total-summary h3 {
+  font-size: 24px;
+}
+.total-summary .container-dots {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  flex: 1;
+  margin-bottom: 4.9%;
+}
+
+
+
 
 
 

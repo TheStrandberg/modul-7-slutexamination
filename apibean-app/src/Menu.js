@@ -2,7 +2,6 @@ import React from "react";
 import topFlower from "./assets/graphics/graphics-header.svg";
 import bottomFlower from "./assets/graphics/graphics-footer.svg";
 import MenuItems from "./MenuItems";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { useEffect, useState } from "react";
