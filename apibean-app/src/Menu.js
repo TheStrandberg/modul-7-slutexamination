@@ -4,17 +4,28 @@ import bottomFlower from "./assets/graphics/graphics-footer.svg";
 import MenuItems from "./MenuItems";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { useEffect, useState } from "react";
 
-function Menu() {
+function Menu( { cart } ) {
 
-  //Gets the number of items in our redux store
-  const itemCount = useSelector((state) => { return state.shoppingCart.length });
+    const [totalItems, setTotalItems] = useState(0);
+
+    useEffect(() => {
+    let items = 0;
+
+    cart.forEach((item) => {
+      items += item.qty;
+    });
+
+    setTotalItems(items);
+  }, [cart, totalItems, setTotalItems]);
 
   return (
     <div>
       <div className="bag">
       <Link to="/cart"><button id="bag-button"></button></Link>
-        <h1 id="counter">{itemCount}</h1>
+        <h1 id="counter">{totalItems}</h1>
       </div>
       <div className="menu-page">
         <img id="top-flower" src={topFlower} alt="top-flower" />
@@ -28,4 +39,10 @@ function Menu() {
   );
 }
 
-export default Menu;
+const mapStateToProps = (state) => {
+  return {
+      cart: state.shoppingCart,
+  };
+};
+
+export default connect(mapStateToProps)(Menu);
