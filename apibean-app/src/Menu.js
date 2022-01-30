@@ -12,13 +12,13 @@ function Menu( { cart } ) {
     const [totalItems, setTotalItems] = useState(0);
 
     useEffect(() => {
-    let items = 0;
+    let itemsTotal = 0;
 
     cart.forEach((item) => {
-      items += item.qty;
+      itemsTotal += item.qty;
     });
 
-    setTotalItems(items);
+    setTotalItems(itemsTotal);
   }, [cart, totalItems, setTotalItems]);
 
   return (
