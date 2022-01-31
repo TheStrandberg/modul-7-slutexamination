@@ -378,6 +378,32 @@ ul > li {
   margin-bottom: 4.9%;
 }
 
+.item-summary #arrow-up {
+  background: url("assets/graphics/arrow-up.svg");
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 1rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  /* border: none; */
+  z-index: 1;
+}
+
+.item-summary #arrow-down {
+  background: url("assets/graphics/arrow-down.svg");
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 1rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  /* border: none; */
+  z-index: 1;
+}
+
 
 
 

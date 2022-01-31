@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
+import { AddQuantity } from './actions/ItemAction';
 import SummaryComponent from './SummaryComponent';
 
 function CartSummary({ cart }) {
@@ -15,6 +16,11 @@ function CartSummary({ cart }) {
 
     setTotalPrice(price);
   }, [cart, totalPrice, setTotalPrice]);
+
+  const dispatch = useDispatch();
+  function IncreaseQuantity(item) {
+    dispatch(AddQuantity(item));
+  }
   
   return (
     <div>
@@ -26,6 +32,7 @@ function CartSummary({ cart }) {
             key={item.id}
             itemTotal={item.itemTotal}
             unitPrice= {item.qty * item.price}
+            IncreaseQuantity={() => IncreaseQuantity(item)}
           />
         );
       })}

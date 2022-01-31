@@ -10,6 +10,7 @@ const itemReducer = (state = initialState, action) => {
         item.id === action.payload.id ? true : false
       );
       return {
+        //If items is already in cart, add + 1 qty. If not, add item to shoppingCart
         ...state,
         shoppingCart: inCart
           ? state.shoppingCart.map((item) =>
@@ -21,25 +22,27 @@ const itemReducer = (state = initialState, action) => {
         
       };
         case "ADD_QUANTITY":
-        return {
-            ...state, 
-            shoppingCart: state.shoppingCart.map((item) => 
-            item.id === action.id 
-            ? {...item, quantity: + item.quantity + 1}
-            : item,
-            ),
-        };
-
+          return {
+            ...state,
+            shoppingCart: state.shoppingCart.map((item) =>
+                  item.id === action.payload.id
+                    ? { ...item, qty: item.qty + 1 }
+                    : item
+                )
+            // : [...state.shoppingCart, { ...item, qty: 1 }],
+          };
         case "SUB_QUANTITY":
-        return {
-            ...state, 
-            shoppingCart: state.shoppingCart.map((item) => 
-            item.id === action.id 
-            ? {...item, quantity: item.quantity !==1 ? item.quantity -1 : 1,
-            }
-            : item,
+          return {
+            ...state,
+            products: state.products.map(product =>
+              product.id === action.id
+                ? {
+                    ...product,
+                    quantity: product.quantity !== 1 ? product.quantity - 1 : 1,
+                  }
+                : product,
             ),
-        };
+          };
         case "RESET": 
         return {
             shoppingCart: []

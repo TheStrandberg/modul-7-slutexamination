@@ -2,6 +2,8 @@
 //Type = definerar för reducers vilken typ av action. 
 //Payload = det vi ska spara
 
+import { bindActionCreators } from "redux";
+
 export const addItemToBasket = (item) => {
     return {
         type: "ADD_ITEM",
@@ -13,4 +15,17 @@ export const clearCart = () => {
     return {
         type: "RESET"
     };
+}
+
+export const AddQuantity = (item) => {
+    return {
+        type: "ADD_QUANTITY",
+        payload: item
+    }
+}
+
+export const SubQuantity = () => {
+    return {
+        type: "SUB_QUANTITY"
+    }
 }

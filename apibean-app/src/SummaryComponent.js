@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
+import arrowUp from "./assets/graphics/arrow-up.svg";
+import arrowDown from "./assets/graphics/arrow-down.svg";
 
-function SummaryComponent({ title, quantity, unitPrice }) {
-//   const [totalPrice, setTotalPrice] = useState(0);
-
-//   useEffect(() => {
-//     let price = 0;
-
-//     cart.forEach((item) => {
-//       price += item.qty * item.price;
-//     });
-
-//     setTotalPrice(price);
-//   }, [cart, totalPrice, setTotalPrice]);
+function SummaryComponent({ title, quantity, IncreaseQuantity,DecreaseQuantity, unitPrice }) {
 
   return (
     <div>
@@ -20,10 +11,11 @@ function SummaryComponent({ title, quantity, unitPrice }) {
         <h1>{title}</h1>
         
         <div className="container-dots"></div>
-        
+        <button id="arrow-up" onClick={IncreaseQuantity}></button>
         <h2>{quantity}</h2>
+        <button id="arrow-down" onClick={DecreaseQuantity}></button>
       </div>
-      {unitPrice}
+      <p>{unitPrice}</p>
     </div>
   );
 }
