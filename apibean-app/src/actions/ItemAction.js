@@ -24,8 +24,9 @@ export const AddQuantity = (item) => {
     }
 }
 
-export const SubQuantity = () => {
+export const SubQuantity = (item) => {
     return {
-        type: "SUB_QUANTITY"
+        type: "SUB_QUANTITY",
+        payload: item
     }
 }

@@ -29,19 +29,18 @@ const itemReducer = (state = initialState, action) => {
                     ? { ...item, qty: item.qty + 1 }
                     : item
                 )
-            // : [...state.shoppingCart, { ...item, qty: 1 }],
           };
         case "SUB_QUANTITY":
           return {
             ...state,
-            products: state.products.map(product =>
-              product.id === action.id
-                ? {
-                    ...product,
-                    quantity: product.quantity !== 1 ? product.quantity - 1 : 1,
+            shoppingCart: state.shoppingCart.map((item) =>
+                  item.id === action.payload.id
+                  ? {
+                    ...item,
+                    qty: item.qty !== 0 ? item.qty - 1 : 0,
                   }
-                : product,
-            ),
+                : item,
+                )
           };
         case "RESET": 
         return {

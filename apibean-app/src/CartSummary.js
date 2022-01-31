@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { connect, useDispatch } from "react-redux";
-import { AddQuantity } from './actions/ItemAction';
+import { AddQuantity, SubQuantity } from './actions/ItemAction';
 import SummaryComponent from './SummaryComponent';
 
 function CartSummary({ cart }) {
@@ -21,6 +21,10 @@ function CartSummary({ cart }) {
   function IncreaseQuantity(item) {
     dispatch(AddQuantity(item));
   }
+
+  function DecreaseQuantity(item){
+    dispatch(SubQuantity(item));
+  }
   
   return (
     <div>
@@ -33,6 +37,7 @@ function CartSummary({ cart }) {
             itemTotal={item.itemTotal}
             unitPrice= {item.qty * item.price}
             IncreaseQuantity={() => IncreaseQuantity(item)}
+            DecreaseQuantity={() => DecreaseQuantity(item)}
           />
         );
       })}
