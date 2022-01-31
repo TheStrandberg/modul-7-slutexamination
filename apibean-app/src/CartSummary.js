@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { connect, useDispatch } from "react-redux";
-import { AddQuantity, SubQuantity } from './actions/ItemAction';
+import { AddQuantity, RemoveFromCart, SubQuantity } from './actions/ItemAction';
 import SummaryComponent from './SummaryComponent';
 
 function CartSummary({ cart }) {
@@ -24,6 +24,10 @@ function CartSummary({ cart }) {
 
   function DecreaseQuantity(item){
     dispatch(SubQuantity(item));
+    if (item.qty === 1) {
+      //remove item from cart
+      dispatch(RemoveFromCart(item));
+    }
   }
   
   return (

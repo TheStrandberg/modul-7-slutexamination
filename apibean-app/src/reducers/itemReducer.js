@@ -42,6 +42,11 @@ const itemReducer = (state = initialState, action) => {
                 : item,
                 )
           };
+          case "REMOVE_FROM_CART":
+          return {
+            ...state,
+            shoppingCart: state.shoppingCart.filter((item) => item.id !== action.payload.id),
+          };
         case "RESET": 
         return {
             shoppingCart: []

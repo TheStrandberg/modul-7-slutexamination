@@ -30,3 +30,10 @@ export const SubQuantity = (item) => {
         payload: item
     }
 }
+
+export const RemoveFromCart = (item) => {
+    return {
+        type: "REMOVE_FROM_CART",
+        payload: item
+    }
+}
