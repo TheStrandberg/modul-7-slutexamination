@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { clearCart } from "./actions/ItemAction";
 import drone from "./assets/graphics/drone.svg";
+import ReactLoading from "react-loading";
 
 function Status() {
   const [order, setOrder] = useState({});
+  const [done, setDone] = useState(undefined);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,13 +18,22 @@ function Status() {
       });
       let fetchOrder = await response.json();
       setOrder(fetchOrder);
+      setDone(true);
     }
     getStatus();
     dispatch(clearCart());
   }, []);
 
   return (
-    <div className="order-page">
+    <>
+    {!done ? (
+      <ReactLoading type={"bars"} 
+      color={"green"}
+      height={100}
+      width={100}
+      />
+    ) : (
+      <div className="order-page">
       <div className="order-number">
         <p>Ordernummer</p>
         <p id="order-number-id">{order.orderNr}</p>
@@ -36,7 +47,9 @@ function Status() {
       <Link to="/menu">
         <button><h3 id="button-font">Ok, cool!</h3></button>
       </Link>
-    </div>
+      </div>
+    )}
+    </>
   );
 }
 
