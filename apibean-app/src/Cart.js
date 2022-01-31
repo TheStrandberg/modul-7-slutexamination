@@ -30,7 +30,7 @@ function Cart({ cart} ) {
     <Link to="/status"><button id="confirm-btn"><h1>Take My Money!</h1></button></Link>
     
       <div className="bag">
-      <Link to="/cart"><button id="bag-button"></button></Link>
+      <Link to="/menu"><button id="bag-button"></button></Link>
         <h1 id="counter">{totalItems}</h1>
       </div>
 

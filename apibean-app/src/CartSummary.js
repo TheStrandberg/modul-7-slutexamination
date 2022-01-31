@@ -9,19 +9,22 @@ function CartSummary({ cart }) {
 
     useEffect(() => {
     let price = 0;
+    let count = 0;
     cart.forEach((item) => {
-      if (item.qty === 1 && cart.length === 2) {
-        if (cart[0].qty === 1 && cart[1].qty === 1 && cart[0].id === 1 || cart[0].id === 7 && cart[1].id === 1 || cart[1].id === 7) {
-          price = 39;
-          return;
-        }
-        else {
-          price += item.qty * item.price;
-        }
+
+      if (item.id === 1 && item.qty === 1) {
+        count++;
       }
-      else {
-        price += item.qty * item.price;
+      if (item.id === 7 && item.qty === 1) {
+        count++;
       }
+      if (count === 2 && cart.length === 2) {
+        price = 39;
+        return;
+      }
+      //if above is false, calc price as usual
+      price += item.qty * item.price;
+
     });
 
     setTotalPrice(price);

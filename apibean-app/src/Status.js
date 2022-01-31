@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { clearCart } from "./actions/ItemAction";
 import drone from "./assets/graphics/drone.svg";
 import ReactLoading from "react-loading";
+import { loader } from "./assets/graphics/loader.png";
 
 function Status() {
   const [order, setOrder] = useState({});
