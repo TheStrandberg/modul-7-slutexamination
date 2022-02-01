@@ -7,7 +7,7 @@ body {
 
 .landing-page {
   display: flex;
-  justify-items: center;
+  /* justify-content: center; */
   align-items: center;
   position: relative;
   bottom: 2.6rem;
@@ -51,7 +51,7 @@ body {
 
 .menu-page #bottom-flower {
   position: absolute;
-  inset: 48rem 0 0 0;
+  inset: 47.8rem 0 0 0;
 }
 
 .menu-page #meny-header {
@@ -75,9 +75,9 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  word-break: break-all;
-  word-wrap: break-word;
-  width: 100%;
+  /* word-break: break-all; */
+  /* word-wrap: break-word; */
+  /* width: 100%; */
   height: 50px;
   /* background-color: aqua; */
   margin-bottom: 1.5rem;
@@ -102,7 +102,7 @@ body {
   bottom: 50%;
   right: 10%;
   /* font-family: "Work Sans"; */
-  font-weight: 400;
+  /* font-weight: 400; */
   font-size: 12px; 
 }
 
@@ -172,6 +172,7 @@ body {
   right: 3.2rem;
   width: 375px;
 }
+
 .cart .menu-page {
   height: 656px;
   opacity: 30%;
@@ -249,9 +250,9 @@ body {
   left: 8.2rem;
   color: #2F2926;
   font-family: "PT Serif";
-  font-weight: 700;
+  /* font-weight: 700; */
   font-size: 32px;
-  z-index: 2;
+  z-index: 1;
 }
 
 .cart #confirm-btn {
@@ -264,14 +265,15 @@ body {
   width: 248px;
   height: 55px;
   background-color: #2F2926;
-  z-index: 2;
+  z-index: 1;
   border-radius: 50px;
+  border: none;
 }
 
 #confirm-btn h1 {
   color: white;
   font-family: "PT Serif";
-  font-weight: 700;
+  /* font-weight: 700; */
   font-size: 24px;
 }
 
@@ -280,13 +282,30 @@ body {
 }
 
 .order-page {
-  position: absolute;
-  bottom: 25.8%;
-  right: 30.5%;
+  position: relative;
+  bottom: 2.6rem;
+  right: 0rem;
   text-align: center;
   background-color: #E5674E;
   width: 375px;
   height: 667px;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 2.6rem;
+  right: 0rem;
+  background-color: #E5674E;
+  width: 375px;
+  height: 667px;
+}
+
+.loader img {
+  width: 100px;
+  height: 100px;
 }
 
 .order-page .order-number {
@@ -452,23 +471,7 @@ body {
   
 }
 
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 25.8%;
-  right: 30.5%;
-  text-align: center;
-  background-color: #E5674E;
-  width: 375px;
-  height: 667px;
-}
 
-.loader img {
-  width: 100px;
-  height: 100px;
-}
 
 
 
