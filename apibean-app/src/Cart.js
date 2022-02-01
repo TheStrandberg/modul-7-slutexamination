@@ -24,10 +24,7 @@ function Cart({ cart} ) {
     <div className="cart">
     <div className="triangle">&#9650;</div>
     <div className="cart-summary">
-    <div className="order">
     <CartSummary />
-    </div>
-      
     </div>
     
     <h1 id="your-order-header">Din beställning</h1>
