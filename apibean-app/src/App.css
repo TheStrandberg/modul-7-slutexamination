@@ -404,6 +404,24 @@ ul > li {
   z-index: 1;
 }
 
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 25.8%;
+  right: 30.5%;
+  text-align: center;
+  background-color: #E5674E;
+  width: 375px;
+  height: 667px;
+}
+
+.loader img {
+  width: 100px;
+  height: 100px;
+}
+
 
 
 

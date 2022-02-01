@@ -9,16 +9,16 @@ function CartSummary({ cart }) {
 
     useEffect(() => {
     let price = 0;
-    let count = 0;
+    let counter = 0;
     cart.forEach((item) => {
 
       if (item.id === 1 && item.qty === 1) {
-        count++;
+        counter++;
       }
       if (item.id === 7 && item.qty === 1) {
-        count++;
+        counter++;
       }
-      if (count === 2 && cart.length === 2) {
+      if (counter === 2 && cart.length === 2) {
         price = 39;
         return;
       }
