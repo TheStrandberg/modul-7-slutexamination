@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import arrowUp from "./assets/graphics/arrow-up.svg";
 import arrowDown from "./assets/graphics/arrow-down.svg";
 
-function SummaryComponent({ title, quantity, IncreaseQuantity,DecreaseQuantity, unitPrice }) {
+function SummaryComponent({ title, quantity, IncreaseQuantity, DecreaseQuantity, unitPrice }) {
 
   return (
     <div>
@@ -15,7 +15,7 @@ function SummaryComponent({ title, quantity, IncreaseQuantity,DecreaseQuantity, 
         <h2>{quantity}</h2>
         <button id="arrow-down" onClick={DecreaseQuantity}></button>
       </div>
-      <p>{unitPrice}</p>
+      <p id="unit-price">{unitPrice} kr</p>
     </div>
   );
 }

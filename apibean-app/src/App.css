@@ -181,7 +181,7 @@ body {
   background-color: black;
 }
 
-.cart .menu-page #meny-header {
+.cart #meny-header {
   position: absolute;
   top: 15%;
 }
@@ -200,8 +200,29 @@ body {
   height: 566px;
   inset: 4.1rem 0 0 4.3rem;
   background-color: white;
-  z-index: 2;
+  z-index: 1;
   border-radius: 5px 5px 5px 5px;
+}
+
+.cart-summary .order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  /* background-color: black; */
+}
+
+.item-summary-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  width: 320px;
+  height: 250px;
+  /* background-color: green; */
+  overflow-y: auto;
 }
 
 .cart #bag-button {
@@ -238,7 +259,7 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 5rem;
+  bottom: 2.5rem;
   left: 7rem;
   width: 248px;
   height: 55px;
@@ -343,65 +364,92 @@ body {
 
 .item-summary {
   display: flex;
-  width: 500px;
-  height: auto;
-  background-color: blue;
-  z-index: 100000;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+  /* background-color: blue; */
+  margin-bottom: -1rem;
 }
 
 .item-summary .container-dots{
   border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
   flex: 1;
-  margin-bottom: 6%;
+  margin-top: 6%;
 }
 
-.item-summary li {
-  list-style: none;
+.item-summary h1 {
+  position: relative;
+  bottom: 11%;
+  font-size: 20px;
+  color: #2F2926;
 }
 
-ul > li {
-  display: block;
+.item-summary h2 {
+  font-size: 14px;
+  color: #2F2926;
+}
+
+#unit-price {
+  position: relative;
+  bottom: .7rem;
+  font-size: 12px;
+  color: #2F2926;
 }
 
 .total-summary {
   display: flex;
   justify-content: center;
-  
+  height: 80px;
+  width: 320px; 
+  /* background-color: pink; */
 }
 
 .total-summary h3 {
   font-size: 24px;
 }
+
 .total-summary .container-dots {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
   flex: 1;
-  margin-bottom: 4.9%;
+  margin-bottom: 10%;
 }
 
-.item-summary #arrow-up {
+#fine-print {
+  position: relative;
+  bottom: 2.3rem;
+}
+
+#arrow-up {
   background: url("assets/graphics/arrow-up.svg");
   position: relative;
+  bottom: 1rem;
+  left: .63rem;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 1rem;
-  width: 20px;
-  height: 20px;
+  width: 8px;
+  height: 11px;
   border-radius: 50%;
-  /* border: none; */
-  z-index: 1;
+  border: none;
+  color: #2F2926;
 }
 
-.item-summary #arrow-down {
+#arrow-down {
   background: url("assets/graphics/arrow-down.svg");
   position: relative;
+  top: 1rem;
+  right: .62rem;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 1rem;
-  width: 20px;
-  height: 20px;
+  width: 8px;
+  height: 11px;
   border-radius: 50%;
-  /* border: none; */
+  border: none;
+  color: #2F2926;
   z-index: 1;
+  
 }
 
 .loader {

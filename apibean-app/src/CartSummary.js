@@ -46,7 +46,8 @@ function CartSummary({ cart }) {
   
   return (
     <div>
-      {cart.map((item) => {
+    <div className="item-summary-page">
+    {cart.map((item) => {
         return (
           <SummaryComponent
             title={item.title}
@@ -59,12 +60,14 @@ function CartSummary({ cart }) {
           />
         );
       })}
+    </div>
+    
       <div className="total-summary">
         <h3>Total</h3>
         <div className="container-dots"></div>
         <h3>{totalPrice}</h3>
       </div>
-      <p>inkl moms + drönarleverans</p>
+      <p id="fine-print">inkl moms + drönarleverans</p>
     </div>
   );
 }
