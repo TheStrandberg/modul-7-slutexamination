@@ -12,7 +12,7 @@ function App() {
        <Route path="/" element={ <Landing /> } exact/>
        <Route path="/menu" element={ <Menu />}/>
        <Route path="/cart" element={ <Cart />} />
-       <Route path="/status" element={ <Status />}></Route>
+       <Route path="/status" element={ <Status />} />
      </Routes>
     </div>
   );

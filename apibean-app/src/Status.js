@@ -21,11 +21,13 @@ function Status() {
       setDone(true);
     }
     getStatus();
+    //clears cart when function is done
     dispatch(clearCart());
   }, []);
 
   return (
     <>
+    {/* when api is done fetching, sets setDone-state to true and proceed to status page */}
       {!done ? (
         <div className="loader">
           <img src={loadingIcon}></img>

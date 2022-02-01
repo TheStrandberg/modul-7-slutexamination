@@ -12,9 +12,12 @@ function CartSummary({ cart }) {
     let counter = 0;
     cart.forEach((item) => {
 
+      //Special price for Bryggkaffe and Gustav Adolfsbakelse
+      //id 1 = "Bryggkaffe"
       if (item.id === 1 && item.qty === 1) {
         counter++;
       }
+      //id 7 = "Gustav Adolfsbakelse"
       if (item.id === 7 && item.qty === 1) {
         counter++;
       }
@@ -37,9 +40,8 @@ function CartSummary({ cart }) {
 
   function DecreaseQuantity(item){
     dispatch(SubQuantity(item));
-    //item.qty === 0 did not work for some reason..
+    //item.qty === 0 showed 0 qty in app but required one more removal before item was removed from cart
     if (item.qty === 1) {
-      //remove item from cart
       dispatch(RemoveFromCart(item));
     }
   }

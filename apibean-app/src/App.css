@@ -29,7 +29,7 @@ body {
 
 .landing-page #loader {
   position: relative;
-  /* For some reason, setting margin right to positive did not work */
+  /* For some reason, setting right to positive did not work */
   inset: 0 0 0 -65%;
 }
 

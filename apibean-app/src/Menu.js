@@ -13,6 +13,7 @@ function Menu( { cart } ) {
     useEffect(() => {
     let itemsTotal = 0;
 
+    //sets the total number of items/quantity in the cart
     cart.forEach((item) => {
       itemsTotal += item.qty;
     });
