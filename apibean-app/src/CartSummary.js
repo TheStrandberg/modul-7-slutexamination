@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect, useDispatch } from "react-redux";
 import { AddQuantity, RemoveFromCart, SubQuantity } from './actions/ItemAction';
 import SummaryComponent from './SummaryComponent';
@@ -67,7 +67,7 @@ function CartSummary({ cart }) {
       <div className="total-summary">
         <h3>Total</h3>
         <div className="container-dots"></div>
-        <h3>{totalPrice}</h3>
+        <h3>{totalPrice} kr</h3>
       </div>
       <p id="fine-print">inkl moms + drönarleverans</p>
     </div>

@@ -9,11 +9,8 @@ function ItemComponent({ title, price, desc, AddItem }) {
           <button id="add-button" onClick={AddItem}></button>
         </div>
         <div className="title">{title}</div>
-
         <div className="container-dots"></div>
-
         <div className="price">{price} kr</div>
-
         <p>{desc}</p>
       </div>
     </div>
