@@ -1,16 +1,15 @@
-//Reducer - uppdaterar state i store
 const initialState = { shoppingCart: []};
 
 const itemReducer = (state = initialState, action) => {
     switch(action.type) {
         case "ADD_ITEM":
-      // Check if Item is in cart already
+      // Check if item is in cart already
       const item = action.payload;
       const inCart = state.shoppingCart.find((item) => 
         item.id === action.payload.id ? true : false
       );
       return {
-        //If items is already in cart, add + 1 qty. If not, add item to shoppingCart
+        //If item is already in cart, add + 1 qty. If not, add item to shoppingCart
         ...state,
         shoppingCart: inCart
           ? state.shoppingCart.map((item) =>
