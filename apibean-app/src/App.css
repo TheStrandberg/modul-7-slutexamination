@@ -80,14 +80,14 @@ body {
   position: relative;
   left: 4%;
   font-family: "PT Serif";
-  font-size: 23px;
+  font-size: 22px;
   font-weight: 700;
 }
 
 .price {
   font-weight: 700;
   font-family: "PT Serif";
-  font-size: 23px;
+  font-size: 22px;
 }
 
 .menu-item p {
@@ -385,6 +385,10 @@ body {
 }
 
 .item-summary h2 {
+  position: relative;
+  left: 1.5%;
+  text-align: center;
+  width: 1rem;
   font-size: 14px;
   color: #2f2926;
 }
@@ -431,7 +435,7 @@ body {
 #arrow-up {
   background: url("assets/graphics/arrow-up.svg");
   bottom: 1rem;
-  left: 0.63rem;
+  left: 6.4%;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 1rem;
@@ -440,7 +444,7 @@ body {
 #arrow-down {
   background: url("assets/graphics/arrow-down.svg");
   top: 1rem;
-  right: 0.62rem;
+  right: 2.9%;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 1rem;
