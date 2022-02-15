@@ -9,13 +9,16 @@ function CartSummary({ cart }) {
 
     useEffect(() => {
     let price = 0;
+    // - Caluculate discount -
+    //First, calculate total price for the entire cart
     cart.forEach((item) => {
       price += item.qty * item.price;
     })
-      //Special price for Bryggkaffe and Gustav Adolfsbakelse
+      //Search for occurences of "Bryggkaffe" and "Gustav Adolfsbakelse" in the cart
       const bryggkaffe = cart.find(e => e.title === "Bryggkaffe");
       const bakelse = cart.find(e => e.title === "Gustav Adolfsbakelse");
 
+      //If both items exist in the cart
       if (bryggkaffe && bakelse) {
         let kaffeCount = bryggkaffe.qty;
         let bakelseCount = bakelse.qty;
@@ -24,12 +27,12 @@ function CartSummary({ cart }) {
           kaffeCount--;
           bakelseCount--;
           if (kaffeCount === 0 || bakelseCount === 0) {
+            //Remove 39 kr from the total price for every itteration
               price -= (39 * i);
               break;
           } 
         }
       }
-
     setTotalPrice(price);
   }, [cart]);
 
