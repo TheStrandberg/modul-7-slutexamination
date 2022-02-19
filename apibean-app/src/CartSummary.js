@@ -27,7 +27,7 @@ function CartSummary({ cart }) {
           kaffeCount--;
           bakelseCount--;
           if (kaffeCount === 0 || bakelseCount === 0) {
-            //Remove 38 kr from the total price for every itteration
+            //Remove 38 kr from the total price for every itteration (i)
               price -= (38 * i);
               break;
           } 
