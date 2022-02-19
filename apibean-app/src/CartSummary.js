@@ -9,7 +9,7 @@ function CartSummary({ cart }) {
 
     useEffect(() => {
     let price = 0;
-    // - Caluculate discount -
+    // - Calculate discount -
     //First, calculate total price for the entire cart
     cart.forEach((item) => {
       price += item.qty * item.price;
