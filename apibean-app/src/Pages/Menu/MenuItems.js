@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { addItemToBasket } from "./actions/ItemAction";
-import ItemComponent from "./ItemComponent";
+import { addItemToBasket } from "../../actions/ItemAction";
+import ItemComponent from "./ItemComponent/ItemComponent";
 
 function MenuItems() {
   const [items, setItems] = useState([]);

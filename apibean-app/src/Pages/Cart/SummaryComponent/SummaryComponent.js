@@ -1,4 +1,5 @@
 import React from "react";
+import "./summarycomponent.css";
 
 function SummaryComponent({ title, quantity, IncreaseQuantity, DecreaseQuantity, unitPrice }) {
 

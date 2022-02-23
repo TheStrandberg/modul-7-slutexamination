@@ -1,4 +1,5 @@
 import React from "react";
+import "./itemcomponent.css";
 
 function ItemComponent({ title, price, desc, AddItem }) {
 

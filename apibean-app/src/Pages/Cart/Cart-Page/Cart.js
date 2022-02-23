@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import topFlower from "./assets/graphics/graphics-header.svg";
-import MenuItems from "./MenuItems";
+import "./cart.css";
+import topFlower from "../../../assets/graphics/graphics-header.svg";
+import MenuItems from "../../Menu/MenuItems";
 import { Link } from "react-router-dom";
-import CartSummary from "./CartSummary";
+import CartSummary from "../CartSummary/CartSummary";
 import { connect } from "react-redux";
 
 function Cart({ cart }) {

@@ -1,0 +1,32 @@
+.item-summary-page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    width: 320px;
+    height: 250px;
+    overflow-y: auto;
+  }
+
+  .total-summary {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    width: 320px;
+  }
+  
+  .total-summary h3 {
+    font-size: 24px;
+  }
+  
+  .total-summary .container-dots {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+    flex: 1;
+    margin-bottom: 10%;
+  }
+  
+  #fine-print {
+    position: relative;
+    bottom: 2.3rem;
+  }

@@ -1,0 +1,67 @@
+.item-summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    margin-bottom: -1rem;
+}
+
+  .item-summary h1 {
+    position: relative;
+    bottom: 11%;
+    font-size: 20px;
+    color: #2f2926;
+}
+
+  .item-summary .container-dots {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+    flex: 1;
+    margin-top: 6%;
+    margin-left: 2%;
+}
+  
+  .item-summary h2 {
+    position: relative;
+    left: 1.5%;
+    text-align: center;
+    width: 1rem;
+    font-size: 14px;
+    color: #2f2926;
+}
+
+#arrow-up,
+#arrow-down {
+  position: relative;
+  width: 8px;
+  height: 11px;
+  border-radius: 50%;
+  border: none;
+  color: #2f2926;
+}
+
+#arrow-up {
+  background: url("../../../assets/graphics/arrow-up.svg");
+  bottom: 1rem;
+  left: 6.4%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 1rem;
+}
+
+#arrow-down {
+  background: url("../../../assets/graphics/arrow-down.svg");
+  top: 1rem;
+  right: 2.9%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 1rem;
+  z-index: 1;
+}
+
+#unit-price {
+    position: relative;
+    bottom: 0.7rem;
+    font-size: 12px;
+    color: #2f2926;
+}

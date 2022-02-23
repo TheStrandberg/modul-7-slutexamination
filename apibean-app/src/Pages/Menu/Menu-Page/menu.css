@@ -1,0 +1,73 @@
+.menu-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 375px;
+    height: 839px;
+    background: #f3e4e1;
+    overflow: hidden;
+  }
+  
+  .menu-page #top-flower {
+    position: absolute;
+    inset: 0 0 0 0;
+  }
+  
+  .menu-page #bottom-flower {
+    position: absolute;
+    inset: 47.8rem 0 0 0;
+  }
+  
+  .menu-page #meny-header {
+    position: absolute;
+    bottom: 40rem;
+    color: #2f2926;
+    font-family: "PT Serif";
+    font-weight: 700;
+    font-size: 42px;
+  }
+  
+  .menu-layout {
+    position: relative;
+    top: 3%;
+    width: 311px;
+    height: 474px;
+  }
+
+  #bag-button {
+    background: url("../../../assets/graphics/bag.svg");
+    position: relative;
+    top: 6.5rem;
+    left: 19rem;
+    background-color: #2f2926;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 1rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    z-index: 1;
+  }
+  
+  #bag-button:hover {
+    background-color: #423b37;
+  }
+  
+  .bag #counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 2.5rem;
+    left: 28em;
+    z-index: 1;
+    color: white;
+    background-color: #e5674e;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+    font-family: "PT Serif";
+  }

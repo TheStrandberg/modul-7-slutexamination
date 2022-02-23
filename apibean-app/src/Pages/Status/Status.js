@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import "./status.css";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { clearCart } from "./actions/ItemAction";
-import drone from "./assets/graphics/drone.svg";
-import loadingIcon from "./assets/graphics/loader.png";
+import { clearCart } from "../../actions/ItemAction";
+import drone from "../../assets/graphics/drone.svg";
+import loadingIcon from "../../assets/graphics/loader.png";
 
 function Status() {
   const [order, setOrder] = useState({});
@@ -30,7 +30,7 @@ function Status() {
     {/* when api is done fetching, sets setDone-state to true and proceed to status page */}
       {!done ? (
         <div className="loader">
-          <img src={loadingIcon}></img>
+          <img src={loadingIcon} alt="loader icon"></img>
         </div>
       ) : (
         <div className="order-page">

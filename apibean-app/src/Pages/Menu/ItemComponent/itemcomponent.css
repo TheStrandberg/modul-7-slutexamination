@@ -1,0 +1,49 @@
+.menu-item {
+    display: flex;
+    flex-wrap: wrap;
+    height: 50px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .title {
+    position: relative;
+    left: 4%;
+    font-family: "PT Serif";
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+  .price {
+    font-weight: 700;
+    font-family: "PT Serif";
+    font-size: 22px;
+  }
+  
+  .menu-item p {
+    position: relative;
+    bottom: 45%;
+    left: 15.5%;
+    font-size: 12px;
+  }
+  
+  .container-dots {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+    flex: 1;
+    margin-bottom: 6%;
+  }
+  
+  #add-button:hover {
+    background-color: #494644;
+  }
+  
+  #add-button {
+    background: url("../../../assets/graphics/add.svg");
+    background-color: #2f2926;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 1rem;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+  }

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import "./cartsummary.css";
 import { connect, useDispatch } from "react-redux";
-import { AddQuantity, RemoveFromCart, SubQuantity } from './actions/ItemAction';
-import SummaryComponent from './SummaryComponent';
+import { AddQuantity, RemoveFromCart, SubQuantity } from '../../../actions/ItemAction';
+import SummaryComponent from '../SummaryComponent/SummaryComponent';
 
 function CartSummary({ cart }) {
 

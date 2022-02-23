@@ -1,9 +1,9 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Landing from './Landing';
-import Menu from './Menu';
-import Cart from "./Cart";
-import Status from "./Status";
+import Landing from './Pages/Landing/Landing';
+import Menu from './Pages/Menu/Menu-Page/Menu';
+import Cart from "./Pages/Cart/Cart-Page/Cart";
+import Status from "./Pages/Status/Status";
 
 function App() {
   return (

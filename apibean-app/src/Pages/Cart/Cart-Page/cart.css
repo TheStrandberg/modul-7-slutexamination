@@ -1,0 +1,100 @@
+.cart {
+    display: flex;
+    position: relative;
+    bottom: 3rem;
+    right: 3.2rem;
+    width: 375px;
+  }
+  
+  .cart .menu-page {
+    height: 656px;
+    opacity: 30%;
+  }
+  
+  .cart .menu-overlay {
+    background-color: black;
+  }
+  
+  .cart #meny-header {
+    position: absolute;
+    top: 15%;
+  }
+  
+  .cart .menu-layout {
+    position: relative;
+    top: 20%;
+  }
+  
+  .cart .cart-summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 337px;
+    height: 566px;
+    inset: 4.1rem 0 0 4.3rem;
+    background-color: white;
+    z-index: 1;
+    border-radius: 5px 5px 5px 5px;
+  }
+
+  /* .cart-summary .order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+  } */
+
+  .cart #bag-button {
+    top: 1rem;
+    left: 22.2rem;
+  }
+  
+  .cart .bag #counter {
+    top: -3rem;
+    left: 32.3em;
+  }
+  
+  .triangle {
+    position: absolute;
+    left: 23.3rem;
+    top: 3.6rem;
+    -webkit-text-stroke: 7px white;
+    z-index: 2;
+  }
+  
+  .cart #your-order-header {
+    position: absolute;
+    top: 5rem;
+    left: 8.2rem;
+    color: #2f2926;
+    font-family: "PT Serif";
+    font-size: 32px;
+    z-index: 1;
+  }
+  
+  .cart #confirm-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 7rem;
+    width: 248px;
+    height: 55px;
+    background-color: #2f2926;
+    z-index: 1;
+    border-radius: 50px;
+    border: none;
+  }
+  
+  #confirm-btn h1 {
+    color: white;
+    font-family: "PT Serif";
+    font-size: 24px;
+  }
+  
+  .cart #confirm-btn:hover {
+    background-color: #423b37;
+  }
