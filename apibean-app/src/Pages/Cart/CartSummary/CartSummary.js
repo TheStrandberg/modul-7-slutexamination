@@ -8,38 +8,43 @@ function CartSummary({ cart }) {
 
     const [totalPrice, setTotalPrice] = useState(0);
 
-    useEffect(() => {
     let price = 0;
-    // - Calculate discount -
-    //First, calculate total price for the entire cart
-    cart.forEach((item) => {
-      price += item.qty * item.price;
-    })
-      //Search for occurences of "Bryggkaffe" and "Gustav Adolfsbakelse" in the cart
-      const bryggkaffe = cart.find(e => e.title === "Bryggkaffe");
-      const bakelse = cart.find(e => e.title === "Gustav Adolfsbakelse");
-
-      //If both items exist in the cart
-      if (bryggkaffe && bakelse) {
-        let kaffeCount = bryggkaffe.qty;
-        let bakelseCount = bakelse.qty;
-        let iterations = kaffeCount + bakelseCount;
-        for (let i = 1; i < iterations; i++) {
-          kaffeCount--;
-          bakelseCount--;
-          if (kaffeCount === 0 || bakelseCount === 0) {
-            //Remove 38 kr from the total price for every itteration (i)
-              price -= (38 * i);
-              break;
-          } 
-        }
-      }
+    
+    useEffect(() => {
+    CalculateDiscount();
     setTotalPrice(price);
   }, [cart]);
 
   const dispatch = useDispatch();
   function IncreaseQuantity(item) {
     dispatch(AddQuantity(item));
+  }
+
+  function CalculateDiscount() {
+    // - Calculate discount -
+    //First, calculate total price for the entire cart
+    cart.forEach((item) => {
+      price += item.qty * item.price;
+    });
+    //Search for occurences of "Bryggkaffe" and "Gustav Adolfsbakelse" in the cart
+    const bryggkaffe = cart.find((e) => e.title === "Bryggkaffe");
+    const bakelse = cart.find((e) => e.title === "Gustav Adolfsbakelse");
+
+    //If both items exist in the cart
+    if (bryggkaffe && bakelse) {
+      let kaffeCount = bryggkaffe.qty;
+      let bakelseCount = bakelse.qty;
+      let iterations = kaffeCount + bakelseCount;
+      for (let i = 1; i < iterations; i++) {
+        kaffeCount--;
+        bakelseCount--;
+        if (kaffeCount === 0 || bakelseCount === 0) {
+          //Remove 38 kr from the total price for every itteration (i)
+          price -= 38 * i;
+          break;
+        }
+      }
+    }
   }
 
   function DecreaseQuantity(item){

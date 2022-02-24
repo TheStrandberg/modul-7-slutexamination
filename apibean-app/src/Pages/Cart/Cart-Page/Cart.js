@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./cart.css";
 import topFlower from "../../../assets/graphics/graphics-header.svg";
 import MenuItems from "../../Menu/MenuItems";
@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 
 function Cart({ cart }) {
   const [totalItems, setTotalItems] = useState(0);
+  const btnRef = useRef();
 
   useEffect(() => {
     let itemsTotal = 0;
@@ -19,13 +20,10 @@ function Cart({ cart }) {
     setTotalItems(itemsTotal);
 
     if (cart.length === 0) {
-      const confirmBtn = document.getElementById("confirm-btn");
-      confirmBtn.style.opacity = "50%";
-      confirmBtn.style.pointerEvents = "none";
+      btnRef.current.style.opacity = "50%";
+      btnRef.current.style.pointerEvents = "none";
     }
   }, [cart, totalItems, setTotalItems]);
-
-  
 
   return (
     <div className="cart">
@@ -37,7 +35,7 @@ function Cart({ cart }) {
       <h1 id="your-order-header">Din beställning</h1>
 
       <Link to="/status">
-        <button id="confirm-btn"><h1>Take My Money!</h1></button>
+        <button ref={btnRef} id="confirm-btn"><h1>Take My Money!</h1></button>
       </Link>
 
       <div className="bag">
