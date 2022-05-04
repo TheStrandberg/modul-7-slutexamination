@@ -3,15 +3,17 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addItemToBasket } from "../../actions/ItemAction";
 import ItemComponent from "./ItemComponent/ItemComponent";
+import menuItems from "../../data/menu.json";
 
 function MenuItems() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
     async function getItems() {
-      const response = await fetch("http://localhost:5000/api/beans");
-      const itemArray = await response.json();
-      setItems(itemArray.menu);
+      // const response = await fetch("http://localhost:5000/api/beans");
+      // const itemArray = await response.json();
+      // setItems(itemArray.menu);
+      setItems(menuItems.menu);
     }
     getItems();
   }, []);
